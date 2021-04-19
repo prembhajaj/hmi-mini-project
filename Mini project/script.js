@@ -2,6 +2,7 @@ hideAll();
 document.getElementById("login_div").style.display="block";
 var income = 0;
 var expense = 0;
+var summary = []
 drawChart();
 
 function hideAll(){
@@ -34,30 +35,49 @@ function drawChart(){
     var temp = income + expense;
     var income_percent = 0;
     var expense_percent = 0;
+    var text = ""
 
     if (temp > 0){
         income_percent = (100*(income/temp));
         expense_percent = (100*(expense/temp));
     }
-
-    // alert(income_percent+"% ("+income+") Income, " + expense_percent+"% ("+expense+") Expense");
-
     document.getElementById("income_chart").style.width = income_percent+"%";
     document.getElementById("expense_chart").style.width = expense_percent+"%";
+
+    for(var i=0;i<summary.length;i++)
+    {
+        text = text + "\n----------------\n"
+        text = text + "Type: "+summary[i][0]+"\nDescription: "+summary[i][1]+"\nAmount: "+summary[i][2];
+        text = text + "\n----------------\n"
+    }
+    if (text == ""){
+        text = "none";
+    }
+    document.getElementById("total_summary").value = text.trim();
 }
 
 function incomeAdd(){
     var temp = +document.getElementById("income_amt_text").value;
+    var desc = document.getElementById("income_desc_text").value;
+
     document.getElementById("income_amt_text").value = "";
     document.getElementById("income_desc_text").value = "";
     income += temp;
+
+    summary.push(["INCOME", desc, temp]);
+
     drawChart();
 }
 
 function expenseAdd(){
     var temp = +document.getElementById("expense_amt_text").value;
+    var desc = document.getElementById("expense_desc_text").value;
+
     document.getElementById("expense_amt_text").value = "";
     document.getElementById("expense_desc_text").value = "";
     expense += temp;
+
+    summary.push(["EXPENSE", desc, temp]);
+
     drawChart();
 }
