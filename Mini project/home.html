@@ -36,7 +36,7 @@
             <img src="income_section.png"><br>
             <input id="income_desc_text" type="text" placeholder="ENTER DESC (SOURCE)"><br>
             <input id="income_amt_text" type="number" placeholder="ENTER AMOUNT"><br>
-            <input type="button" value="SAVE DETAILS" class="mid shadow-button bg-green" onclick="incomeAdd()"><br>
+            <input type="button" value="SAVE DETAILS" class="mid shadow-button bg-lightgreen" onclick="incomeAdd()"><br>
         </div>
 
         <div id="expense_section">
@@ -49,22 +49,22 @@
         <div id="account_summary">
             <img src="income_expense.png"><br>
 
-            <span style="text-align: left; background-color: white; width: 350px; display:inline-block;">
-                <span style="margin-left: 10px; width: 60px; background-color: white; display:inline-block;">
+            <span class="chart-container">
+                <span class="chart-label">
                     Income:
                 </span> 
-                <span style="text-align: left; background-color: gray; width: 255px; display:inline-block;">
-                    <span id="income_chart" style="text-align: left; background-color: green; width: 50%; display:inline-block;">
+                <span class="chart-default-fill bg-gray">
+                    <span id="income_chart" class="chart-income-expense bg-green">
                         <span id="income_span">0</span>/-
                     </span>
                 </span>
                 <br>
                 <br>
-                <span style="margin-left: 10px; width: 60px; background-color: white; display:inline-block;">
+                <span class="chart-label">
                     Expense:
                 </span> 
-                <span style="text-align: left; background-color: gray; width: 255px; display:inline-block; ">
-                    <span id="expense_chart" style="text-align: left; background-color: red; width: 0%; display:inline-block; ">
+                <span class="chart-default-fill bg-gray">
+                    <span id="expense_chart" class="chart-income-expense bg-red">
                         <span id="expense_span">0</span>/-
                     </span>
                 </span>

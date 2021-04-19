@@ -6,8 +6,12 @@
     font-size: 50px;
 }
 
-.bg-green {
+.bg-lightgreen {
     background-color: lightgreen; /* Green */
+}
+
+.bg-green {
+    background-color: green; /* Green */
 }
 
 .bg-yellow {
@@ -84,6 +88,27 @@ input[type=text]:focus,input[type=password],input[type=number]:focus {
     border: 3px solid #555;
 }
 
+.chart-container {
+    text-align: left; 
+    width: 350px; 
+    display:inline-block;
+}
 
+.chart-label {
+    text-align: left; 
+    margin-left: 10px; 
+    width: 60px; 
+    display:inline-block;
+}
 
+.chart-default-fill {
+    text-align: left; 
+    width: 255px; 
+    display:inline-block;
+}
 
+.chart-income-expense {
+    text-align: right; 
+    width: 0%; 
+    display:inline-block;
+}

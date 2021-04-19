@@ -40,7 +40,7 @@ function drawChart(){
         expense_percent = (100*(expense/temp));
     }
 
-    alert(income_percent+"% ("+income+") Income, " + expense_percent+"% ("+expense+") Expense");
+    // alert(income_percent+"% ("+income+") Income, " + expense_percent+"% ("+expense+") Expense");
 
     document.getElementById("income_chart").style.width = income_percent+"%";
     document.getElementById("expense_chart").style.width = expense_percent+"%";
