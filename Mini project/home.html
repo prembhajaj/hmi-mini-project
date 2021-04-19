@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <center>
+        <div>
+            <img src="Logo.png">
+        </div>
+        <div id="login_div">
+            <input type="text" placeholder="ENTER USERNAME" id="username"><br>
+            <input type="password" placeholder="ENTER PASSWORD"><br>
+            <span><a href="">FORGOT PASSWORD? CLICK HERE</a></span><br>
+            <input type="button" value="LOGIN" onclick="onLogin()" class="mid login-button bg-orange">
+        </div>
+
+        <div id="profile">
+            <img src="profile_pic.png">
+            <span id="user_name">PANKAJ</span><br>
+        </div>
+        
+
+
+        <div id="options_div">
+            <input type="button" value="INCOME" onclick="onChange('income_section')" class="mid shadow-button bg-orange"><br>
+            <input type="button" value="EXPENSE" onclick="onChange('expense_section')" class="mid shadow-button bg-orange"><br>
+            <input type="button" value="INCOME & EXPENSE SUMMARY" onclick="onChange('account_summary')" class="mid shadow-button bg-orange"><br>
+            <input type="button" value="ACCOUNT SETTING" class="mid shadow-button bg-orange"><br>
+            <input type="button" value="LOGOUT" onclick="location.reload()" class="mid shadow-button bg-orange"><br>
+        </div>
+
+        <div id="income_section">
+            <img src="income_section.png"><br>
+            <input type="text" placeholder="ENTER DESC (SOURCE)"><br>
+            <input type="text" placeholder="ENTER AMOUNT"><br>
+            <input type="button" value="SAVE DETAILS" class="mid shadow-button bg-green"><br>
+        </div>
+
+        <div id="expense_section">
+            <img src="expense_section.png"><br>
+            <input type="text" placeholder="ENTER DESC (TAKER)"><br>
+            <input type="text" placeholder="ENTER AMOUNT"><br>
+            <input type="button" value="SAVE DETAILS" class="mid shadow-button bg-orange"><br>
+        </div>
+
+        <div id="account_summary">
+            <img src="income_expense.png"><br>
+            <span>Total Income: Rs.</span>
+            <span>5000</span><br>
+            <span>Total Expense: Rs.</span>
+            <span>4500</span>
+        </div>
+
+        <div id="back_button">
+            <input type="button" value="<<<" onclick="onLogin()" class=" mid back-button bg-gray"><br>
+        </div>
+
+
+
+
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>
