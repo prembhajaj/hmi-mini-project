@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <center>
+    <span style="text-align: center;">
         <div>
             <img src="Logo.png">
         </div>
@@ -23,8 +23,6 @@
             <img src="profile_pic.png">
             <span id="user_name">PANKAJ</span><br>
         </div>
-        
-
 
         <div id="options_div">
             <input type="button" value="INCOME" onclick="onChange('income_section')" class="mid shadow-button bg-orange"><br>
@@ -36,34 +34,50 @@
 
         <div id="income_section">
             <img src="income_section.png"><br>
-            <input type="text" placeholder="ENTER DESC (SOURCE)"><br>
-            <input type="text" placeholder="ENTER AMOUNT"><br>
-            <input type="button" value="SAVE DETAILS" class="mid shadow-button bg-green"><br>
+            <input id="income_desc_text" type="text" placeholder="ENTER DESC (SOURCE)"><br>
+            <input id="income_amt_text" type="number" placeholder="ENTER AMOUNT"><br>
+            <input type="button" value="SAVE DETAILS" class="mid shadow-button bg-green" onclick="incomeAdd()"><br>
         </div>
 
         <div id="expense_section">
             <img src="expense_section.png"><br>
-            <input type="text" placeholder="ENTER DESC (TAKER)"><br>
-            <input type="text" placeholder="ENTER AMOUNT"><br>
-            <input type="button" value="SAVE DETAILS" class="mid shadow-button bg-orange"><br>
+            <input id="expense_desc_text" type="text" placeholder="ENTER DESC (TAKER)"><br>
+            <input id="expense_amt_text" type="number" placeholder="ENTER AMOUNT"><br>
+            <input type="button" value="SAVE DETAILS" class="mid shadow-button bg-orange" onclick="expenseAdd()"><br>
         </div>
 
         <div id="account_summary">
             <img src="income_expense.png"><br>
-            <span>Total Income: Rs.</span>
-            <span>5000</span><br>
-            <span>Total Expense: Rs.</span>
-            <span>4500</span>
+
+            <span style="text-align: left; background-color: white; width: 350px; display:inline-block;">
+                <span style="margin-left: 10px; width: 60px; background-color: white; display:inline-block;">
+                    Income:
+                </span> 
+                <span style="text-align: left; background-color: gray; width: 255px; display:inline-block;">
+                    <span id="income_chart" style="text-align: left; background-color: green; width: 50%; display:inline-block;">
+                        <span id="income_span">0</span>/-
+                    </span>
+                </span>
+                <br>
+                <br>
+                <span style="margin-left: 10px; width: 60px; background-color: white; display:inline-block;">
+                    Expense:
+                </span> 
+                <span style="text-align: left; background-color: gray; width: 255px; display:inline-block; ">
+                    <span id="expense_chart" style="text-align: left; background-color: red; width: 0%; display:inline-block; ">
+                        <span id="expense_span">0</span>/-
+                    </span>
+                </span>
+            </span>
+
         </div>
 
         <div id="back_button">
             <input type="button" value="<<<" onclick="onLogin()" class=" mid back-button bg-gray"><br>
         </div>
 
+    </span>
 
-
-
-    </center>
     <script src="script.js"></script>
 </body>
 </html>
